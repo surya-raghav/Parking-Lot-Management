@@ -1,6 +1,6 @@
 package model;
 
-public enum VehicleType {
+public enum SlotSize {
     SMALL,
     LARGE,
     OVERSIZE
