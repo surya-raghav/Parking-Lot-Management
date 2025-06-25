@@ -16,7 +16,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String command;
         System.out.println("Welcome to Prking Lot");
-        System.out.println("Commands: park [SIZE], exit, status, quit");
+        System.out.println("Commands: park [PLATE] [SIZE], exit, status, quit");
 
         while (true) {
             System.out.print(">");
@@ -25,13 +25,18 @@ public class Main {
 
             if (parts[0].equalsIgnoreCase("park")) {
                 try {
-                    VehicleSize size = VehicleSize.valueOf(parts[1].toUpperCase());
-                    parkingLot.parkVehicle(new Vehicle(size));
+                    String plate = parts[1];
+                    VehicleSize size = VehicleSize.valueOf(parts[2].toUpperCase());
+                    parkingLot.parkVehicle(new Vehicle(size, plate));
                 } catch (IllegalArgumentException e) {
                     System.out.println("Invalid Vehicle Type");
                 }
             } else if (parts[0].equalsIgnoreCase("exit")) {
-                parkingLot.exitVehicle();
+                if (parts.length == 1) {
+                    System.out.println("Please enter vehicle number to exit");
+                } else {
+                    parkingLot.exitVehicle(parts[1]);
+                }
             } else if (parts[0].equalsIgnoreCase("status")) {
                 parkingLot.displayStatus();
             } else if (parts[0].equalsIgnoreCase("quit")) {

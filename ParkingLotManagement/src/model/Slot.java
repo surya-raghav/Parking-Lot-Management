@@ -43,7 +43,7 @@ public class Slot {
         return "Slot{ " +
                 "Number = " + number +
                 ", Size = " + size +
-                ", vehicle slot = " + (parkedVehicle != null ? "Occupied" : "Available") +
+                ", vehicle slot = " + (parkedVehicle != null ? parkedVehicle.getNumberPlate(): "Available") +
                 '}';
 
     }

@@ -34,11 +34,11 @@ public class ParkingLot {
         return false;
     }
 
-    public boolean exitVehicle() {
+    public boolean exitVehicle(String numberplate) {
         for (Slot slot: slots) {
-            if (!slot.isVehicleAvailable()) {
+            if (!slot.isVehicleAvailable() && slot.getParkedVehicle().getNumberPlate().equals(numberplate)) {
                 slot.vacateVehicle();
-                System.out.println("Vehicle exited from slot # " + slot.getNumber());
+                System.out.println("Vehicle with " + numberplate + " exited from slot # " + slot.getNumber());
                 return true;
             }
         }
