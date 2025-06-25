@@ -1,15 +1,21 @@
 package model;
 
 public class Slot {
+    private int number;
     private SlotSize size;
     private Vehicle parkedVehicle;
 
-    public Slot(SlotSize size) {
+    public Slot(int number, SlotSize size) {
+        this.number = number;
         this.size = size;
     }
 
     public SlotSize getSize() {
         return size;
+    }
+
+    public int getNumber() {
+        return number;
     }
 
     public Vehicle getParkedVehicle() {
