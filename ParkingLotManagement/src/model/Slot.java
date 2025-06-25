@@ -37,4 +37,15 @@ public class Slot {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "Slot{ " +
+                "Number = " + number +
+                ", Size = " + size +
+                ", vehicle slot = " + (parkedVehicle != null ? "Occupied" : "Available") +
+                '}';
+
+    }
 }
+
