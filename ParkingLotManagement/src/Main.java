@@ -15,7 +15,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         String command;
-        System.out.println("Welcome to Prking Lot");
+        System.out.println("Welcome to Parking Lot");
         System.out.println("Commands: park [PLATE] [SIZE], exit, status, quit");
 
         while (true) {
