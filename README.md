@@ -31,7 +31,7 @@ It is designed with flexibility and extensibility in mind.
 - **JDK installed and added to PATH**
 - Any text editor or IDE (e.g., IntelliJ, VS Code, Eclipse)
 
-### 🛠 Compilation
+### Compilation
 
 Use the terminal or your preferred IDE:
 
