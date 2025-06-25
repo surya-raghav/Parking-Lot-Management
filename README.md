@@ -73,12 +73,12 @@ Check ParkingLot.java, Slot.java, and Main.java for System.out.println() calls a
 
   - Step through the logic line-by-line to inspect slot and vehicle state
 
-## 📌 Dependencies
+### 📌 Dependencies
 - No external libraries required
 
 - Entirely Java Standard Library based
 
-## 🧪 How to Test
+### 🧪 How to Test
 - Use the file test/ParkingLotManagementTest.java to:
 
   - Initialize a lot with known configuration
