@@ -1,4 +1,4 @@
-# 🚗 Parking Lot Management App (Java)
+#  Parking Lot Management App (Java)
 
 This is a scalable, object-oriented **Parking Lot Management System** built in Java. 
 The system supports managing different vehicle types and parking slot sizes through a **command-line interface**. 
@@ -6,7 +6,7 @@ It is designed with flexibility and extensibility in mind.
 
 ---
 
-## ✅ Features
+##  Features
 
 - Manage parking for:
   - Small cars
@@ -23,32 +23,32 @@ It is designed with flexibility and extensibility in mind.
 
 ---
 
-## 🚀 How to Compile and Run
+##  How to Compile and Run
 
-### ✅ Requirements
+###  Requirements
 
 - **Java 11 or later**
 - **JDK installed and added to PATH**
 - Any text editor or IDE (e.g., IntelliJ, VS Code, Eclipse)
 
-### 🛠️ Compilation
+### 🛠 Compilation
 
 Use the terminal or your preferred IDE:
 
 ```bash
 javac -d out src/model/*.java src/service/*.java src/Main.java
 
-▶️ Running the App
+▶ Running the App
 java -cp out Main
 
-🧪 CLI Commands
+ CLI Commands
 Commands:
   park [PLATE] [SIZE]           → Parks the vehicle if a slot is available
   exit [PLATE]                  → Removes vehicle from lot
   status                        → Displays current slot occupancy
   quit                          → Exits the CLI
 
-💡 Example:
+ Example:
 > park MH55 SMALL
 > park EV999 LARGE
 > exit MH55
@@ -56,7 +56,7 @@ Commands:
 > quit
 ```
 
-### 🧑‍🔬 How to Debug the Project
+###  How to Debug the Project
 - Using Console Print Statements:
 Check ParkingLot.java, Slot.java, and Main.java for System.out.println() calls already included
 
@@ -73,12 +73,12 @@ Check ParkingLot.java, Slot.java, and Main.java for System.out.println() calls a
 
   - Step through the logic line-by-line to inspect slot and vehicle state
 
-### 📌 Dependencies
+###  Dependencies
 - No external libraries required
 
 - Entirely Java Standard Library based
 
-### 🧪 How to Test
+###  How to Test
 - Use the file test/ParkingLotManagementTest.java to:
 
   - Initialize a lot with known configuration
@@ -92,5 +92,5 @@ To compile and run the test:
   javac -d out src/model/*.java src/service/*.java test/ParkingLotManagementTest.java
   java -cp out test.ParkingLotManagementTest
 ```
-### 🧑‍💻 Author
-Made with 💻 by Surya Raghav
+###  Author
+Made by Surya Raghav
