@@ -7,11 +7,25 @@ import java.util.Scanner;
 // Entry point for the Parking Lot CLI application
 public class Main {
     public static void main(String[] args) {
+
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.print("Enter total number of slots: ");
+        int totalSlots = Integer.parseInt(scanner1.nextLine());
+
+        int baseSize = totalSlots / 3;
+        int remainder = totalSlots % 3;
+
+        int smallSlots = baseSize + (remainder > 0 ? 1 : 0);
+        int largeSlots = baseSize + (remainder > 1 ? 1 : 0);
+        int oversizeSlots = baseSize;
+        
         // Step 1: Define the parking lot slot distribution
         Map<SlotSize, Integer> slotDistribution = new HashMap<>();
-        slotDistribution.put(SlotSize.SMALL, 5);     // 5 small slots
-        slotDistribution.put(SlotSize.LARGE, 5);     // 5 large slots
-        slotDistribution.put(SlotSize.OVERSIZE, 2);  // 2 oversize slots
+        slotDistribution.put(SlotSize.SMALL, smallSlots);
+        slotDistribution.put(SlotSize.LARGE, largeSlots);
+        slotDistribution.put(SlotSize.OVERSIZE, oversizeSlots);
+
+        System.out.println("Slot distribution: " + slotDistribution);
 
         // Step 2: Initialize the ParkingLot with the slot configuration
         ParkingLot parkingLot = new ParkingLot(slotDistribution);
