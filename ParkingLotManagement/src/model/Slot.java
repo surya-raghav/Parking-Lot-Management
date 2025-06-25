@@ -2,7 +2,7 @@ package model;
 
 public class Slot {
     private SlotSize size;
-    private Vehicle parketVehicle;
+    private Vehicle parkedVehicle;
 
     public Slot(SlotSize size) {
         this.size = size;
@@ -12,7 +12,23 @@ public class Slot {
         return size;
     }
 
-    public Vehicle getParketVehicle() {
-        return parketVehicle;
+    public Vehicle getParkedVehicle() {
+        return parkedVehicle;
+    }
+
+    public boolean isVehicleAvailable() {
+        return parkedVehicle == null;
+    }
+
+    public void  vacateVehicle() {
+        this.parkedVehicle = null;
+    }
+
+    public boolean parkTheVehicle(Vehicle vehicle) {
+        if (isVehicleAvailable() && size.name().equals(vehicle.getSize().name())) {
+            this.parkedVehicle = vehicle;
+            return true;
+        }
+        return false;
     }
 }
